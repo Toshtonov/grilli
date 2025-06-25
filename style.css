@@ -1,0 +1,185 @@
+:root {
+    --colorE4c: #E4c590;
+    --textColor: #ffff;
+    --blackColor: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50.5px;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px 16px;
+    color: var(--textColor);
+    border-bottom: 1px solid #4d4a46;
+    font-weight: 400;
+}
+
+.addrese,
+.headerTopDatas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.border {
+    width: 8px;
+    height: 8px;
+    background-color: none;
+    border: 0.5px solid var(--colorE4c);
+    transform: rotate(43deg);
+}
+
+.clockIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.location,
+.headerTopWorkTime,
+.addreseTel,
+.addreseEmail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font: 12px 'DM Sans', sans-serif;
+    color: var(--textColor);
+}
+
+.findTableBtn {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 45px;
+    font: 14px 'DM Sans', sans-serif;
+    background-color: var(--colorE4c);
+    outline: none;
+    border: var(--colorE4c) 1px solid;
+    color: var(--blackColor);
+    z-index: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+.findTableBtn::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blackColor);
+    z-index: -1;
+    transition: top 0.4s ease;
+    border-radius: 20%;
+}
+
+.findTableBtn:hover::before {
+    top: 0;
+}
+
+
+.findTableBtn:hover {
+    color: var(--textColor);
+}
+
+
+/* korusel */
+.carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    z-index: 0;
+}
+
+.slide.active {
+    z-index: 1;
+    animation: zoom 20s linear;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: var(--textColor);
+    text-align: center;
+    margin-top: 30vh;
+}
+
+@keyframes zoom {
+    to {
+        transform: scale(2);
+    }
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--colorE4c);
+    background: transparent;
+    color: var(--colorE4c);
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.carousel-btn span {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+.carousel-btn:hover {
+    background-color: var(--colorE4c);
+    color: var(--blackColor);
+}
+
+.carousel-btn.prev {
+    left: 30px;
+}
+
+.carousel-btn.next {
+    right: 30px;
+}
+
+/* korusel yopildi */

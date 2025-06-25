@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./favicon.svg" type="image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Grilli - Amazing & Delicious Food</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="headerTop">
+                <div class="headerTopDatas">
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="locationText">Restaurant St, Delicious City, London 9578, UK</span>
+                    </div>
+                    <div class="border"></div>
+                    <div class="headerTopWorkTime">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                            stroke="currentColor" className="size-6" class="clockIcon">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+
+                        <span class="headerTopWorkTimeText">Daily : 8.00 am to 10.00 pm</span </div>
+                    </div>
+
+                </div>
+                <div class="addrese">
+                    <div class="addreseTel">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="addreseTelText">+998 99 999 99 99</span>
+                    </div>
+                    <div class="border"></div>
+
+                    <div class="addreseEmail">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="addreseEmailText">Grilli@resturant</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <img src="./logo.svg" alt="Logo" class="navLogo">
+                <ul>
+                    <li>HOME</li>
+                    <li>MENUS</li>
+                    <li>ABOUT US</li>
+                    <li>OUR CHEFS</li>
+                    <li>CONTACT</li>
+                </ul>
+                <button class="findTableBtn">Find A Table</button>
+            </nav>
+        </header>
+        <div class="carousel">
+            <div class="slide active" style="background-image: url(./hero-slider-1.jpg);"></div>
+            <div class="slide" style="background-image: url(./hero-slider-2.jpg);"></div>
+            <div class="slide" style="background-image: url(./hero-slider-3.jpg);"></div>
+        </div>
+
+        <!-- Kontent -->
+        <div class="content">
+            <button class="carousel-btn prev" onclick="showPrevSlide()"><span><i
+                        class="fa-solid fa-angle-left"></i></span></button>
+            <button class="carousel-btn next" onclick="showNextSlide()"><span><i
+                        class="fa-solid fa-angle-right"></i></span></button>
+
+            <h1>Xush kelibsiz!</h1>
+            <p>Bu carousel orqa fon uchun ishlatilmoqda.</p>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
