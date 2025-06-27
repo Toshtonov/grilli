@@ -13,7 +13,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Grilli - Amazing & Delicious Food</title>
 </head>
 
@@ -28,11 +34,7 @@
                     </div>
                     <div class="border"></div>
                     <div class="headerTopWorkTime">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                            stroke="currentColor" className="size-6" class="clockIcon">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
+                        <i class="fa-regular fa-clock"></i>
 
                         <span class="headerTopWorkTimeText">Daily : 8.00 am to 10.00 pm</span </div>
                     </div>
@@ -60,25 +62,109 @@
                     <li>OUR CHEFS</li>
                     <li>CONTACT</li>
                 </ul>
-                <button class="findTableBtn">Find A Table</button>
+                <button class="findTableBtn">
+                    <span class="btn-text-original">FIND A TABLE</span>
+                    <span class="btn-text">FIND A TABLE</span>
+                </button>
             </nav>
+            <div class="carousel">
+                <!-- Slide backgrounds -->
+                <div class="slide active" style="background-image: url('./hero-slider-1.jpg')" data-slide="1"></div>
+                <div class="slide" style="background-image: url('./hero-slider-2.jpg')" data-slide="2"></div>
+                <div class="slide" style="background-image: url('./hero-slider-3.jpg')" data-slide="3"></div>
+
+                <!-- Slide contents -->
+                <div class="slide-content active" data-content="1">
+                    <p class="coruselCenterText fade-up">TRADITIONAL & HYGINE</p>
+                    <img src="separator.svg" alt="coruselNaqsh" class="coruselNaqsh fade-up"><br>
+                    <span class="CoruselCenterText fade-up2">For the love of delicious food</span>
+                    <p class="fade-up3">Come with family & feel the joy of mouthwatering food</p>
+                    <button class="coruselCenterBtn fade-up4" style="color: white;">View Our Menu</button>
+                </div>
+
+                <div class="slide-content" data-content="2">
+                    <p class="coruselCenterText fade-up">DELIGHTFUL EXPERIENCE</p>
+                    <img src="separator.svg" alt="coruselNaqsh" class="coruselNaqsh fade-up"><br>
+                    <span class="CoruselCenterText fade-up2">Flavors Inspired by the Seasons</span>
+                    <p class="fade-up3">Come with family & feel the joy of mouthwatering food</p>
+                    <button class="coruselCenterBtn fade-up4" style="color: white;">View Our Menu</button>
+                </div>
+
+                <div class="slide-content" data-content="3">
+                    <p class="coruselCenterText fade-up">AMAIZING & DELICIOUS</p>
+                    <img src="separator.svg" alt="coruselNaqsh" class="coruselNaqsh fade-up"><br>
+                    <span class="CoruselCenterText fade-up2">Where every flavor tells a story</span>
+                    <p class="fade-up3">Come with family & feel the joy of mouthwatering food</p>
+                    <button class="coruselCenterBtn fade-up4" style="color: white;">View Our Menu</button>
+                </div>
+                <button class="carousel-btn prev" onclick="showPrevSlide()"><span><i
+                            class="fa-solid fa-angle-left"></i></span></button>
+                <button class="carousel-btn next" onclick="showNextSlide()"><span><i
+                            class="fa-solid fa-angle-right"></i></span></button>
+            </div>
+            <div class="bookATable">
+                <div class="rotating-border"></div>
+                <img src="./hero-icon.png" alt="book a table photo" class="BookAtableIcon">
+                <p class="bookAtavleTex">BOOK A <br>TABLE</p>
+            </div>
         </header>
-        <div class="carousel">
-            <div class="slide active" style="background-image: url(./hero-slider-1.jpg);"></div>
-            <div class="slide" style="background-image: url(./hero-slider-2.jpg);"></div>
-            <div class="slide" style="background-image: url(./hero-slider-3.jpg);"></div>
-        </div>
+        <section class="section">
+            <div class="royalty">
+                <p class="royaltysubTitle">FLAVORS FOR ROYALTY</p>
+                <img src="./separator.svg" alt="" style="width: 100px; margin: 10px;">
+                <h1 class="royaltyTitle">We Offer Top Notch</h1>
+                <div class="royaltyTextBox">
+                    <p class="royaltytext">Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                        lorem
+                        Ipsum
+                        has been the industrys standard dummy text ever.</p>
+                </div>
+                <div class="royaltyCardOne">
+                    <div class="royaltycardImagebox">
+                        <img src="./img-pattern.svg" class="royaltycardImageboxBg">
+                        <img src="./service-1.jpg" alt="ROYALTY card" class="royaltyImage">
+                    </div>
+                    <h1 class="royaltyCardTitle">Breakfast</h1>
+                    <button class="WievMenu">VIEW MENU</button>
+                </div>
+                <div class="royaltyCardTwo">
+                    <div class="royaltycardImagebox">
+                        <img src="./img-pattern.svg" class="royaltycardImageboxBg">
+                        <img src="./service-2.jpg" alt="ROYALTY card" class="royaltyImage">
+                    </div>
+                    <h1 class="royaltyCardTitle">Appetizers</h1>
+                    <button class="WievMenu">VIEW MENU</button>
+                </div>
+                <div class="royaltyCardThree">
+                    <div class="royaltycardImagebox">
+                        <img src="./img-pattern.svg" class="royaltycardImageboxBg">
+                        <img src="./service-3.jpg" alt="ROYALTY card" class="royaltyImage">
+                    </div>
+                    <h1 class="royaltyCardTitle">Drinks</h1>
+                    <button class="WievMenu">VIEW MENU</button>
+                </div>
+                <img src="./shape-2.png" alt="" class="animation">
+                <img src="./shape-1.png" alt="" class="animation1">
+            </div>
+            <div class="ourStory">
+                <div class="ourStoryleft">
+                    <h1 class="ourStoryleftMiniTitle">OUR STORY</h1><br>
+                    <img src="./separator.svg" alt="" class="ourStorysubTitle" style="width: 100px;">
+                    <h1 class="ourStoryTitle">Every Fla vor Tells a Story</h1>
+                    <div class="ourStoryTextBox">
+                        <p class="ourStoryText">Lorem Ipsum is simply dummy text of the printingand typesetting industry
+                            lorem Ipsum has been the industrys standard dummy text ever since the when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book It has survived
+                            not only five centuries, but also the leap into.</p>
 
-        <!-- Kontent -->
-        <div class="content">
-            <button class="carousel-btn prev" onclick="showPrevSlide()"><span><i
-                        class="fa-solid fa-angle-left"></i></span></button>
-            <button class="carousel-btn next" onclick="showNextSlide()"><span><i
-                        class="fa-solid fa-angle-right"></i></span></button>
-
-            <h1>Xush kelibsiz!</h1>
-            <p>Bu carousel orqa fon uchun ishlatilmoqda.</p>
-        </div>
+                    </div>
+                        <p class="phone">Book Through Call</p>
+                        <p class="phoneNum">+998 99 999 99 99</p>
+                        <button class="readmore findTableBtne ">READ MORE</button>
+                        <img src="./shape-3.png" alt="" class="ourStoryShape">
+                </div>
+            </div>
+        </section>
 
     </div>
     <script src="app.js"></script>
