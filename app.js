@@ -61,3 +61,22 @@ function resetAutoSlide() {
   clearInterval(autoSlide);
   autoSlide = setInterval(nextSlide, 5000);
 }
+const nav = document.querySelector('.nav');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY === 0) {
+    nav.classList.remove('scrolled-up');
+    nav.classList.remove('hidden');
+  } else if (currentScrollY > lastScrollY) {
+    nav.classList.remove('scrolled-up');
+    nav.classList.add('hidden');
+  } else {
+    nav.classList.remove('hidden');
+    nav.classList.add('scrolled-up');
+  }
+
+  lastScrollY = currentScrollY;
+});
